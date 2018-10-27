@@ -19,7 +19,7 @@ module.exports = class ShoppingCart {
         return this.items.splice(0, this.items.length)
     }
     total() {        
-        return this.items.reduce((a, b) => a + b.quantity * b.pricePerUnit, 0)
+        return this.items.reduce((acc, value) => acc + value.quantity * value.pricePerUnit, 0)
     }
 }
 
